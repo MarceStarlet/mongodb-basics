@@ -1,2 +1,2 @@
 # mongodb-basics
-Simple CRUD operations with MongoDB using an example of a "Library"
+Simple CRUD operations with MongoDB implementing an example of a "Book Searcher"
