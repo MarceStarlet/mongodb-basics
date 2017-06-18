@@ -55,9 +55,6 @@ public class MongoBookDAOImp implements BookDAO{
 	 */
 	@Override
 	public void create( Book b ) {
-		
-		log.info("In create method");
-		
 		asyncBooksCollection.insertOne( bookAdapter.toDocument( b ),
 								 ( final Void result, final Throwable t ) -> {
 									if( null == t ) {
