@@ -9,6 +9,7 @@ import static spark.Spark.get;
 import static spark.Spark.path;
 import static spark.Spark.post;
 import static spark.Spark.put;
+import static spark.Spark.staticFiles;
 
 import java.io.IOException;
 import java.io.StringWriter;
@@ -69,6 +70,8 @@ public class ServerREST {
 		 *       /isbn
 		 *       /filter
 		 */
+		
+		staticFiles.location("/public"); // Static files
 		
     	path("/booksearcher", () -> {
     		before("/*", (q, a) -> log.info("Received api call"));
