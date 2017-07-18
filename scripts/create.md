@@ -23,3 +23,9 @@ db.books.insertMany([
 {  isbn : "4567890123", title  : "Functional Programming in Scala 7", description : "Functional Programming in Scala is a serious tutorial for programmers looking to learn FP and apply it to the everyday business of coding.", edition : 2001, classifications : ["Technology", "Programming", "Reactive"], editorial : "Manning Pubns Co.", authors : [ { name : "Paul Chiusano", biography: "Has been writing and shipping functional code in Scala since 2008" }, { name : "Runar Bjarnason", biography: "Is a self-taught programmer with 12 years of industry experience" } ]},
 {  isbn : "3456789012", title  : "Functional Programming in Scala 8", description : "Functional Programming in Scala is a serious tutorial for programmers looking to learn FP and apply it to the everyday business of coding.", edition : 2007, classifications : ["Technology", "Programming", "Reactive"], editorial : "Manning Pubns Co.", authors : [ { name : "Paul Chiusano", biography: "Has been writing and shipping functional code in Scala since 2008" }, { name : "Runar Bjarnason", biography: "Is a self-taught programmer with 12 years of industry experience" } ]}
 ]);
+
+### mongoimport command
+
+Use *mongoimport* command to import JSON format "documents" to a collection in a database.
+
+mongoimport --db test --collection test --file <your path>/books.json
