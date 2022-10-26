@@ -76,6 +76,13 @@ public class ServerREST {
     	path("/booksearcher", () -> {
     		before("/*", (q, a) -> log.info("Received api call"));
     		path("/books", () -> {
+				get("/hello", (request, response) -> {
+    				Book mockBook = new Book("ISBN", "Title", "Description", 2005, 
+					null, "Editorial", null);
+    				response.status(200);
+    				response.type("application/json");
+    				return dataToJson( mockBook ); 
+    			});
     			post("/create", (request, response) -> {
     				Book book = mapper.readValue( request.body(), Book.class );
     				
